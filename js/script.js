@@ -8,11 +8,13 @@
 
 
 var array=[];
-for (var i=0; i<5;i++){
-  var numeriRandom=Math.floor(Math.random() * 100);
-  array.push(numeriRandom);
-  if (numeriRandom.includes(array)
-    console.log();
+var i=0;
+while( numeriRandom<5;){
+  var numeriRandom=Math.floor(Math.random() * 101);
+  i++;
+}
+if (numeriRandom.includes(array){
+    array.push(numeriRandom);
 }
 alert(numeriRandom);
 
@@ -22,6 +24,15 @@ var secondi=setTimeout(myFunction, 30000);
 function myFunction();
 
 //#3) -Creare un prompt che si ripete 5 volte(ciclo for)
-  for(var i=0; i<5; i++){
-    var inserisciNumeri=parseint(prompt(inserisci un numero));
-  }
+//-Verificare che l'utente non inserisca numeri uguali.
+  var i=0;
+  while(i<5;){
+    var vuoto:[];
+    var numeriUtente=parseint(prompt(inserisci un numero tra 1 e 99));
+
+    if (numeriUtente<0 || numeriUtente>99){
+      alert('inserisci un numero tra 1 e 99!!');
+    }else (numeriUtente==vuoto)){
+    alert('Hai inserito lo stesso numero');
+    i++
+  };
