@@ -6,18 +6,22 @@
 // #4) - Il software deve dire quanti e quali numeri l'utente ha indovinato.
 //       !attenzione!inserire solo i numeri indovinati dall'utente
 
-var numeriRandom=Math.floor(Math.random() * 100);
+
+var array=[];
 for (var i=0; i<5;i++){
-  alert(numeriRandom);
+  var numeriRandom=Math.floor(Math.random() * 100);
+  array.push(numeriRandom);
+  if (numeriRandom.includes(array)
+    console.log();
 }
-console.log(numeriRandom);
+alert(numeriRandom);
 
 //#2) -Far partire un timer di 30 secondi.
       //inseriamo i 30secondi
 var secondi=setTimeout(myFunction, 30000);
 function myFunction();
 
-//#3) -Creare un prompt che si ripete 5 volte(ciclo for) 
+//#3) -Creare un prompt che si ripete 5 volte(ciclo for)
   for(var i=0; i<5; i++){
     var inserisciNumeri=parseint(prompt(inserisci un numero));
   }
