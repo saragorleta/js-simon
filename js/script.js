@@ -9,6 +9,15 @@
 var numeriRandom=Math.floor(Math.random() * 100);
 for (var i=0; i<5;i++){
   alert(numeriRandom);
-
 }
 console.log(numeriRandom);
+
+//#2) -Far partire un timer di 30 secondi.
+      //inseriamo i 30secondi
+var secondi=setTimeout(myFunction, 30000);
+function myFunction();
+
+//#3) -Creare un prompt che si ripete 5 volte(ciclo for) 
+  for(var i=0; i<5; i++){
+    var inserisciNumeri=parseint(prompt(inserisci un numero));
+  }
