@@ -1,38 +1,53 @@
+var numeriCasuali=[];
+var numeriUtente=[];
 // #1) -Creare un array che generi 5 numeri random con un alert.
-//     -Verificare che non vengano emessi numeri random uguali.
-// #2) -Far partire un timer di 30 secondi.
-// #3) -Creare un prompt che si ripete 5 volte(ciclo for) dove l'utente deve inserire per 5 volte i numeri da indovinare.
-//     -Verificare che l'utente non inserisca numeri uguali.
-// #4) - Il software deve dire quanti e quali numeri l'utente ha indovinato.
-//       !attenzione!inserire solo i numeri indovinati dall'utente
-
-
-var array=[];
-var i=0;
-while( numeriRandom<5;){
-  var numeriRandom=Math.floor(Math.random() * 101);
-  i++;
+while(numeriCasuali.length<5){
+  var numero=(10,100); // -Verificare che non vengano emessi numeri random uguali.
+  if (!numeriCasuali.includes(numero)){
+    numeriCasuali.push(numero);
+  }
 }
-if (numeriRandom.includes(array){
-    array.push(numeriRandom);
+//popoliamo l'array dei numeri casuali - opzione funzione fatta da noi
+while (numeriCasuali.length<5){
+  var numero=(10,100);
+  if ricerca(numeriCasuali,numero)){
+    numeriCasuali.push(numero);
+ }
 }
-alert(numeriRandom);
+console.log(numeriCasuali);
 
-//#2) -Far partire un timer di 30 secondi.
-      //inseriamo i 30secondi
-var secondi=setTimeout(myFunction, 30000);
-function myFunction();
+setTimeout(inserimento, 30000);
+// function myFunction();
 
-//#3) -Creare un prompt che si ripete 5 volte(ciclo for)
-//-Verificare che l'utente non inserisca numeri uguali.
-  var i=0;
-  while(i<5;){
-    var vuoto:[];
-    var numeriUtente=parseint(prompt(inserisci un numero tra 1 e 99));
-
-    if (numeriUtente<0 || numeriUtente>99){
-      alert('inserisci un numero tra 1 e 99!!');
-    }else (numeriUtente==vuoto)){
-    alert('Hai inserito lo stesso numero');
-    i++
-  };
+// FUNZIONI
+function generaRandom(min,max){
+  return Math.floor(Math.random()*(max - min + 1) + min);
+}
+    // if (numeriCasuali.includes(numero)){
+    //   numeriCasuali.push(numero);         questa parte la possiamo trasformare in funzione , quindi senza utilizzare .includes
+    // alert(numeriCasuali);
+function ricerca(array,elemento){
+  for(var i=0; i<array.length;i++){     //abbiamo utilizzato il ciclo for
+    if(elemento==array[i]){  //questo è un confronto per capire se elemento è pr
+      return true;
+    }
+  }
+  return false;
+}
+// function ricerca(array,elemento){
+//   var i=0;
+//   while(array.length<5;){
+//     if(elemento==array[i]){           //stessa funzione ma il ciclo while
+//       return true;
+//     }
+//   }
+//   i++;
+// }
+function inserimento(){
+  for(var i=0; i<5;i++){
+    var n=parseInt(prompt('inserisci un numero'));
+    if(ricerca(numeriCasuali,n)){
+      numeriUtente.push(n);
+    }
+  }console.log(numeriUtente);
+}
